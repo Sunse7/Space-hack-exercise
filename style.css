@@ -1,22 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Shanti&family=Share&display=swap%27');
+
+:root {
+    --primary-font: 'Share';
+    --secondary-font: 'Shanti';
+    --black-purple: #2E2D31;
+    --dark-purple: #5D44AB; 
+    --purple-rouge: #7654B4;
+    --damp-purple: #0E002C;
+    --light-purple: #967ECB;
+    --footer-purple: #654C8C;
+    --text-color-light: #fff;
+    --text-color-dark: #000;
+}
+
 * {
-    background-color: rgb(135, 9, 121);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    
 }
 
 main {
-    max-width: 1440px;
-    height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
 
-img {
-    max-width: 10%;
+.main__title--black-purple,
+.main__title--damp-purple {
+    color: var(--text-color-light);
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    grid-column: span 2;
 }
 
-.astronaut {
+.main__title--black-purple {
+    background-color: var(--black-purple);
+    padding: 3rem 0;
+}
+
+.image-box--planet {
+    background-color: var(--dark-purple);
+    padding: 3.2rem;
+}
+
+.image-box--astronaut {
+    background-color: var(--purple-rouge);
+    padding: 3.2rem;
+}
+
+.image-box--gun {
+    background-color: var(--light-purple);
+    padding: 3.2rem;
+}
+
+.image-box--ship {
+    background-color: var(--damp-purple);
+    padding: 3.2rem;
+}
+
+.image--astronaut {
     background-image: url(Images/astronaut.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba();
-    width: 50%;
-    height: auto;
+    box-shadow: inset 0 0 0 1000px rgba(255, 12, 12, 0.5);
+    width: 700px;
+    height: 400px;
+    grid-column: span 2;
 }
 
+.image-box--station {
+    background-color: var(--purple-rouge);
+    padding: 3.2rem;
+}
+
+.image-box--space {
+    background-color: var(--dark-purple);
+    padding: 3.2rem;
+}
+
+.main__title--damp-purple {
+    background-color: var(--damp-purple);
+    padding: 6rem 0;
+}
+
+.image-box--constellation {
+    background-color: var(--black-purple);
+    padding: 7.5rem;
+    grid-column: span 2;
+}
+
+.footer {
+    background-color: var(--footer-purple);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 2rem;
+    padding: 3.2rem;
+}
+
+.footer__text--bold {
+    color: var(--text-color-dark);
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.footer__title {
+    color: var(--text-color-dark);
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.footer__text {
+    color: var(--text-color-dark);
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
